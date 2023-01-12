@@ -107,14 +107,14 @@ export default function Search() {
         } absolute left-0 right-0 top-0 bottom-0 bg-black bg-opacity-20 flex justify-center items-center`}
       >
         <div
-          class="p-2 rounded bg-white max-w-lg w-full flex flex-col gap-4"
+          class="p-2 rounded bg-white dark:bg-[rgb(13,17,23)] max-w-lg w-full flex flex-col gap-4"
           onClick={(e) => {
             e.stopPropagation();
           }}
         >
           <input
             class="bg-gray-200 dark:bg-gray-800 px-4 py-2 w-full rounded border-2 border-blue-500"
-            placeholder="🔍 Search"
+            placeholder="Search"
             value={query}
             ref={searchBox}
             onInput={(e) => {
@@ -124,13 +124,17 @@ export default function Search() {
             }}
           />
           {results.length === 0 && (
-            <p class="p-4 border-2 rounded">No results to display</p>
+            <p class="p-4 border-2 dark:border-[rgb(33,38,45)] rounded">
+              No results to display
+            </p>
           )}
           {results.map((result, i) => (
             <a
               href={result.link}
               class={`p-4 border-2 hover:border-blue-500 rounded ${
-                i === selected ? "border-blue-500" : ""
+                i === selected
+                  ? "border-blue-500"
+                  : "dark:border-[rgb(33,38,45)]"
               }`}
             >
               {result.snippet
