@@ -51,7 +51,8 @@ almost never need to touch them. It currently has the following settings.:
 }
 ```
 
-The next step is to create a user. In this example, the user is an adminstrator, but unless you have a niche usecase, this is not needed.
+The next step is to create a user. In this example, the user is an adminstrator,
+but unless you have a niche usecase, this is not needed.
 
 ```
 cookie create_user ./my_first_cookie --admin
