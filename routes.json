@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Introduction",
+    "link": "/introduction"
+  },
+  {
+    "name": "Getting started",
+    "link": "/getting-started",
+    "sub_files": [
+      {
+        "name": "Creating a database",
+        "link": "/getting-started/create-database"
+      },
+      {
+        "name": "Tables",
+        "link": "/getting-started/tables"
+      }
+    ]
+  }
+]

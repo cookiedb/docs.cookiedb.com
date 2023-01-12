@@ -4,32 +4,12 @@ import { CSS, render } from "gfm";
 import { resolve } from "std/path/mod.ts";
 import { Header } from "components/Header.tsx";
 import Search from "islands/Search.tsx";
+import routes from "routes.json" assert { type: "json" };
 
 interface DocumentationProps {
   body: string;
   route: string;
 }
-
-const routes = [
-  {
-    name: "Introduction",
-    link: "/introduction",
-  },
-  {
-    name: "Getting started",
-    link: "/getting-started",
-    sub_files: [
-      {
-        name: "Creating a database",
-        link: "/getting-started/create-database",
-      },
-      {
-        name: "Tables",
-        link: "/getting-started/tables",
-      },
-    ],
-  },
-];
 
 export const handler: Handlers<DocumentationProps> = {
   async GET(_, ctx) {
