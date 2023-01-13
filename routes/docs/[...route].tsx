@@ -3,8 +3,7 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { CSS, render } from "gfm";
 import { resolve } from "std/path/mod.ts";
 import { Header } from "components/Header.tsx";
-import Search from "islands/Search.tsx";
-import routes from "routes.json" assert { type: "json" };
+import { Sidebar } from "components/Sidebar.tsx";
 
 interface DocumentationProps {
   body: string;
@@ -36,43 +35,16 @@ export default function Documentation(props: PageProps<DocumentationProps>) {
       <Head>
         <title>CookieDB Documentation</title>
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
+        <meta name="description" content={props.data.body.split("\n\n")[1]} />
       </Head>
       <div class="flex flex-col p-4 w-screen min-h-screen text-black dark:text-[rgb(201,209,217)] bg-white dark:bg-[rgb(13,17,23)]">
         <Header />
         <div class="flex justify-center h-full">
           <div class="flex gap-8 max-w-screen-lg w-full overflow-hidden">
-            <div class="border-r pr-8 flex flex-col gap-4 dark:border-[rgb(33,38,45)]">
-              <Search />
-              <div class="flex flex-col gap-2">
-                {routes.map((route, i) => (
-                  <>
-                    <a
-                      href={"/docs" + route.link}
-                      class={`hover:text-gray-400 dark:hover:text-white ${
-                        props.data.route === route.link ? "font-semibold" : ""
-                      }`}
-                    >
-                      {i + 1}. {route.name}
-                    </a>
-                    {route.sub_files && (
-                      route.sub_files.map((subroute, sub_i) => (
-                        <a
-                          href={"/docs" + subroute.link}
-                          class={`pl-4 hover:text-gray-400 dark:hover:text-white ${
-                            props.data.route === subroute.link
-                              ? "font-semibold"
-                              : ""
-                          }`}
-                        >
-                          {i + 1}.{sub_i + 1}. {subroute.name}
-                        </a>
-                      ))
-                    )}
-                  </>
-                ))}
-              </div>
+            <div class="border-r dark:border-[rgb(33,38,45)] pr-8 hidden md:block">
+              <Sidebar route={props.data.route} />
             </div>
-            <div
+            <section
               data-color-mode="auto"
               data-light-theme="light"
               data-dark-theme="dark"

@@ -102,9 +102,9 @@ export default function Search() {
           setQuery("");
           setResults([]);
         }}
-        class={`${
-          show ? "" : "hidden"
-        } absolute left-0 right-0 top-0 bottom-0 bg-black bg-opacity-20 flex justify-center items-center`}
+        class={`absolute left-0 right-0 top-0 bottom-0 bg-black bg-opacity-20 justify-center items-center ${
+          show ? "flex" : "hidden"
+        }`}
       >
         <div
           class="p-2 rounded bg-white dark:bg-[rgb(13,17,23)] max-w-lg w-full flex flex-col gap-4"
