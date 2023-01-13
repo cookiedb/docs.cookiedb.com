@@ -1,4 +1,5 @@
 import { JSX } from "preact";
+import Search from "islands/Search.tsx";
 import { Logo } from "./Logo.tsx";
 
 export function Header(props: JSX.HTMLAttributes<HTMLButtonElement>) {
