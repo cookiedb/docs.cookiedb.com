@@ -25,7 +25,7 @@ export const handler: Handlers<DocumentationProps> = {
     const language = getCookies(
       req.headers,
     )["language"] as keyof typeof languages;
-    const keep = language ?? "bash";
+    const keep = language ?? "typescript";
 
     try {
       body = await Deno.readTextFile(
@@ -43,7 +43,7 @@ export const handler: Handlers<DocumentationProps> = {
     return ctx.render({
       body,
       route: "/" + ctx.params.route,
-      language,
+      language: keep,
     });
   },
 };

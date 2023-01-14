@@ -54,6 +54,8 @@ export const handler: Handlers = {
       return 0;
     });
 
+    results = results.slice(0, 5);
+
     return new Response(JSON.stringify(results));
   },
 };
