@@ -14,6 +14,70 @@
       {
         "name": "Tables",
         "link": "/getting-started/tables"
+      },
+      {
+        "name": "Documents",
+        "link": "/getting-started/documents"
+      },
+      {
+        "name": "Expressions",
+        "link": "/getting-started/expressions"
+      }
+    ]
+  },
+  {
+    "name": "Basic API",
+    "link": "/basic-api",
+    "sub_files": [
+      {
+        "name": "Creating a table",
+        "link": "/basic-api/create-table"
+      },
+      {
+        "name": "Dropping a table",
+        "link": "/basic-api/drop-table"
+      },
+      {
+        "name": "Insert a document",
+        "link": "/basic-api/insert-document"
+      },
+      {
+        "name": "Get a document",
+        "link": "/basic-api/get-document"
+      },
+      {
+        "name": "Delete a document",
+        "link": "/basic-api/delete-document"
+      },
+      {
+        "name": "Update a document",
+        "link": "/basic-api/update-document"
+      },
+      {
+        "name": "Selecting documents",
+        "link": "/basic-api/select-documents"
+      },
+      {
+        "name": "Getting metadata",
+        "link": "/basic-api/get-metadata"
+      }
+    ]
+  },
+  {
+    "name": "Admin API",
+    "link": "/admin-api",
+    "sub_files": [
+      {
+        "name": "Creating a user",
+        "link": "/admin-api/create-user"
+      },
+      {
+        "name": "Deleting a user",
+        "link": "/admin-api/delete-user"
+      },
+      {
+        "name": "Regenerating tokens",
+        "link": "/admin-api/regenerate-tokens"
       }
     ]
   }
