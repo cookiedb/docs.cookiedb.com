@@ -26,20 +26,20 @@ javascript runtime. CookieDB is currently built on it.
 Next, you should just be able to run the following command. This will install
 the executable and add it to your path.
 
-```bash
+```
 deno install -Af -n cookie https://deno.land/x/cookiedb/cli.ts
 ```
 
 Now, navigate to the directory you want and type:
 
-```bash
+```
 cookie init ./my_first_cookie
 ```
 
 This will create a new directory and will add a configuration file. You should
 almost never need to touch them. It currently has the following settings.:
 
-```javascript
+```json
 {
   "port": 8777, // CookieDB http server port
   "log": false, // Log debug events into the console
@@ -60,7 +60,7 @@ cookie create_user ./my_first_cookie --admin
 
 Lastly, to start your server, run:
 
-```bash
+```
 cookie start ./my_first_cookie
 ```
 

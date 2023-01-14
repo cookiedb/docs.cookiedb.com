@@ -1,14 +1,15 @@
 # Tables
 
 One can think of tables in CookieDB much like tables in SQL or collections in
-MongoDB. They are at heart just a way to group of bunch of documents together.
+MongoDB. They are at heart just a way to group of bunch of
+[documents](/docs/getting-started/documents) together.
 
 One advantage of CookieDB over a document database like MongoDB is that it has
 support for true and proper schemas. A table schema is a way to enforce a
 certain pattern on the documents a table contains. For example, if I wrote the
 following schema for the table "users":
 
-```javascript
+```json
 {
   "username": "string",
   "age": "number"
@@ -34,7 +35,7 @@ CookieDB currently has support for the following keywords:
 For a more comprehensive example of a schema. Let's see a more complete user
 example:
 
-```javascript
+```json
 {
   "username": "unique string",
   "profile": {
@@ -48,6 +49,6 @@ example:
 ```
 
 I would like to note a design choice here. There is no `date` type. This is
-intentional. Dates should really be represented as a unix timestamp. Unix
-timestamps do not suffer from timezones. Unix timestamps do not need to worry
-about leap seconds. Please just use unix timestamps.
+intentional. Dates should really be represented as a unix timestamp (in
+numerical form). Unix timestamps do not suffer from timezones. Unix timestamps
+do not need to worry about leap seconds. Please just use unix timestamps.
