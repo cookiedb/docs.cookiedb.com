@@ -69,7 +69,7 @@ export default function Documentation(props: PageProps<DocumentationProps>) {
               data-color-mode="auto"
               data-light-theme="light"
               data-dark-theme="dark"
-              class="markdown-body"
+              class="markdown-body flex-grow"
               dangerouslySetInnerHTML={{ __html: render(props.data.body) }}
             />
           </div>

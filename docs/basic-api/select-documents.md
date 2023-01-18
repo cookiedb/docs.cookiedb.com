@@ -24,7 +24,6 @@ await cookieDB.select("table_name", "eq($name, 'CookieFan37')");
 There are a lot of additional options you can pass to customize your query:
 
 - Max Results - Limit the number of results to a certain value (default: -1)
-- Show Keys - Add the keys of documents as a top-level "key" (default: true)
 - Expand Keys - Automatically join foreign keys with the objects they link to
   (default: false)
 - Order\* (not on by default)
@@ -44,7 +43,6 @@ curl -X POST http://localhost:8777/select/table_name             \
 ```typescript
 await cookieDB.select("table_name", "eq($name, 'CookieFan37')", {
   maxResults: 5,
-  showKeys: false,
   expandKeys: true,
 });
 ```
