@@ -36,21 +36,6 @@ Now, navigate to the directory you want and type:
 cookie init ./my_first_cookie
 ```
 
-This will create a new directory and will add a configuration file. You should
-almost never need to touch them. It currently has the following settings.:
-
-```json
-{
-  "port": 8777, // CookieDB http server port
-  "log": false, // Log debug events into the console
-  "users": {}, // The users and their access tokens
-  "admins": [], // The administrative users
-  "advanced": { // Performance tuning. Don't touch.
-    "max_documents_per_chunk": 10000
-  }
-}
-```
-
 The next step is to create a user. In this example, the user is an adminstrator,
 but unless you have a niche usecase, this is not needed.
 
@@ -64,4 +49,4 @@ Lastly, to start your server, run:
 cookie start ./my_first_cookie
 ```
 
-If you ever get lost, you can simply type `cookie help` to get your bearings.
+Please view [the CLI documentation](/docs/getting-started/cli) for more details.
