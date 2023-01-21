@@ -1,6 +1,8 @@
 # Creating a table
 
 In CookieDB all table creation is under the concept of "create if not exists".
+You are able to use any table name you like, except for those prefixed and
+suffixed by double underscores.
 
 ```bash
 curl -X POST http://localhost:8777/create/table_name \

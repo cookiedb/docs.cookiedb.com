@@ -22,6 +22,10 @@
       {
         "name": "Expressions",
         "link": "/getting-started/expressions"
+      },
+      {
+        "name": "CLI",
+        "link": "/getting-started/cli"
       }
     ]
   },
