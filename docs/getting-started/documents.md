@@ -15,7 +15,7 @@ Documents are simply just JSON objects. Let's look at an example of a document:
 }
 ```
 
-As you can see, there can be nested objects. There are a few limitations that
+As you can see, they can be nested objects. There are a few limitations that
 you should be aware of:
 
 - Documents cannot have a top-level key by the name of "key". This is reserved

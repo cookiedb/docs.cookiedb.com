@@ -24,6 +24,10 @@
         "link": "/getting-started/expressions"
       },
       {
+        "name": "Aliases",
+        "link": "/getting-started/aliases"
+      },
+      {
         "name": "CLI",
         "link": "/getting-started/cli"
       }
@@ -36,6 +40,10 @@
       {
         "name": "Creating a table",
         "link": "/basic-api/create-table"
+      },
+      {
+        "name": "Editing a table",
+        "link": "/basic-api/edit-table"
       },
       {
         "name": "Dropping a table",
