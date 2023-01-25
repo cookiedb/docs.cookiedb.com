@@ -18,8 +18,8 @@ the schema.
 
 ```bash
 curl -X POST http://localhost:8777/create/table_name  \
-  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"  \
-  -H "Content-Type: application/json"           \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"        \
+  -H "Content-Type: application/json"                 \
   -d '{"name": "string", "is_cool": "boolean"}'
 ```
 
