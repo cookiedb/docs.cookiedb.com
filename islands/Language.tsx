@@ -15,12 +15,26 @@ export default function Language(props: LanguageProps) {
   );
   const [show, setShow] = useState(false);
 
+  useEffect(() => {
+    const e = () => {
+      if (show) {
+        setShow(false);
+      }
+    };
+
+    document.body.addEventListener("click", e);
+
+    return () => {
+      document.body.removeEventListener("click", e);
+    };
+  }, [show]);
+
   return (
     <div class="w-52">
       <button
         class={`w-full text-left flex justify-between ${
           show ? "rounded-t" : "rounded"
-        } border border-gray-700 px-4 py-2 transition-all shadow cursor-pointer hover:text-gray-400`}
+        } bg-gray-200 dark:bg-gray-800 px-4 py-2 transition-all cursor-pointer hover:text-gray-400`}
         onClick={() => {
           setShow(!show);
         }}
@@ -48,8 +62,8 @@ export default function Language(props: LanguageProps) {
                   location.reload();
                 }}
                 class={`${
-                  i === Object.keys(languages).length - 2 ? "rounded-b" : ""
-                } text-left w-full border-b border-r border-l border-gray-700 px-4 py-2 transition-all shadow cursor-pointer hover:text-gray-400`}
+                  i === Object.keys(languages).length - 1 ? "rounded-b" : ""
+                } text-left w-full bg-gray-200 dark:bg-gray-800 border-t-2 border-gray-300 px-4 py-2 cursor-pointer transition-all hover:text-gray-400`}
               >
                 {name}
               </button>
