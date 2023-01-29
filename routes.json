@@ -30,6 +30,10 @@
       {
         "name": "CLI",
         "link": "/getting-started/cli"
+      },
+      {
+        "name": "Drivers",
+        "link": "/getting-started/drivers"
       }
     ]
   },
