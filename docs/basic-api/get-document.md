@@ -10,5 +10,5 @@ curl -X POST http://localhost:8777/get/table_name/document_key \
 ```
 
 ```typescript
-await cookieDB.insert("table_name", "document_key");
+await cookieDB.get("table_name", "document_key");
 ```
