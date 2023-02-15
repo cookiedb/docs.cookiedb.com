@@ -7,7 +7,13 @@ some input and results in some output.
 Let's look at a small example:
 
 ```
-where($name, "CookieFan37")
+eq($name, "CookieFan37")
+```
+
+Let's look at a more complex example:
+
+```
+and(starts_with($name, "Cookie"), gt($age, 10), not(eq($description, null)))
 ```
 
 Let's break down this syntax.
