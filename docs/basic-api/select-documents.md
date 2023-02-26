@@ -57,11 +57,26 @@ await cookieDB.select("table_name", "eq($name, 'CookieFan37')", {
   expandKeys: true,
 });
 ```
+Data used in the following
+
+```typescript
+const personsData: {}[] = [
+    {firstName: "Luc",    lastName: "Skywalker",  age: 54,  address: null},
+    {firstName: "Elon",   lastName: "Musk",       age: 45,  address: null},
+    {firstName: "George", lastName: "Washington", age: 102, address: null},
+    {firstName: "George", lastName: "Clooney", age: 87, address: null},
+];
+const locationsData = [
+    {city: "Tatooine", state: "Milky Way"},
+    {city: "San Francisco", state: "California"},
+];
+```
 <details open><summary>
 
 # <a id='selector'>Selector</a>
 
 </summary>
+
 
 ## Select all document
 
