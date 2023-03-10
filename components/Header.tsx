@@ -1,4 +1,3 @@
-import { JSX } from "preact";
 import { Logo } from "./Logo.tsx";
 import Language, { languages } from "islands/Language.tsx";
 

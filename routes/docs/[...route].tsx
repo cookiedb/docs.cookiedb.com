@@ -3,6 +3,7 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { resolve } from "std/path/mod.ts";
 import { Header } from "components/Header.tsx";
 import { Sidebar } from "components/Sidebar.tsx";
+import { Footer } from "components/Footer.tsx";
 import { languages } from "islands/Language.tsx";
 import { getCookies } from "std/http/cookie.ts";
 
@@ -55,7 +56,19 @@ export default function Documentation(props: PageProps<DocumentationProps>) {
         <title>
           {props.data.body.split("\n\n")[0].slice(1)} | CookieDB Docs
         </title>
-        <style dangerouslySetInnerHTML={{ __html: CSS }} />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: CSS + `.markdown-body ul {
+  list-style: disc
+}
+.markdown-body ol {
+  list-style: numeric
+}
+.markdown-body table {
+  width: fit-content;
+}`,
+          }}
+        />
         <meta name="description" content={props.data.body.split("\n\n")[1]} />
       </Head>
       <div class="flex flex-col p-4 w-screen min-h-screen text-black dark:text-[rgb(201,209,217)] bg-white dark:bg-[rgb(13,17,23)]">
@@ -65,13 +78,16 @@ export default function Documentation(props: PageProps<DocumentationProps>) {
             <div class="border-r dark:border-[rgb(33,38,45)] pr-8 hidden md:block">
               <Sidebar route={props.data.route} />
             </div>
-            <section
-              data-color-mode="auto"
-              data-light-theme="light"
-              data-dark-theme="dark"
-              class="markdown-body flex-grow"
-              dangerouslySetInnerHTML={{ __html: render(props.data.body) }}
-            />
+            <div>
+              <section
+                data-color-mode="auto"
+                data-light-theme="light"
+                data-dark-theme="dark"
+                class="markdown-body flex-grow"
+                dangerouslySetInnerHTML={{ __html: render(props.data.body) }}
+              />
+              <Footer route={props.data.route} />
+            </div>
           </div>
         </div>
       </div>
